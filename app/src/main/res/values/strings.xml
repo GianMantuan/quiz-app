@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MyQuizzApp</string>
+    <string name="login_app_name">Quiz App!</string>
+    <string name="login_name_placeholder">Name</string>
+    <string name="login_button_text">Start</string>
+    <string name="submit">SUBMIT</string>
+    <string name="image_content_description">Quiz Image</string>
+    <string name="question_item">Question %s</string>
+    <string name="next_question">NEXT</string>
+    <string name="finish_quiz">FINISH</string>
+    <string name="quiz_finished_title">Quiz Finished</string>
+    <string name="score_title">You scored a total of</string>
+    <string name="congratulations">Congratulations!!!</string>
+    <string name="user_name">%s</string>
+    <string name="exit_quiz">Exit Quiz</string>
+    <string name="exit_message">You can try again to have a better score</string>
+</resources>

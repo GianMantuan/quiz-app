@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResultActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/background_result_card"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/white_label_pill"
+                    android:minWidth="120dp"
+                    android:padding="10dp"
+                    android:text="@string/quiz_finished_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_dark_alt"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:minWidth="120dp"
+                    android:text="@string/congratulations"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_dark_alt"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minWidth="120dp"
+                    android:text="@string/user_name"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_dark_alt"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:minWidth="120dp"
+                    android:text="@string/score_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_dark_alt"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="20dp">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/cpi_scored_questions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:indeterminate="false"
+                        android:max="10"
+                        android:progress="5"
+                        app:indicatorColor="@color/progress_alt"
+                        app:indicatorSize="190dp"
+                        app:trackColor="@color/background_dark_alt"
+                        app:trackCornerRadius="10dp"
+                        app:trackThickness="4dp"
+                        tools:ignore="MissingConstraints" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mcv_scored_questions"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="120dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/cpi_scored_questions"
+                        app:layout_constraintEnd_toEndOf="@+id/cpi_scored_questions"
+                        app:layout_constraintStart_toStartOf="@+id/cpi_scored_questions"
+                        app:layout_constraintTop_toTopOf="@+id/cpi_scored_questions">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_scored_questions"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="40sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/mcv_scored_questions"
+                                app:layout_constraintEnd_toEndOf="@+id/mcv_scored_questions"
+                                app:layout_constraintStart_toStartOf="@+id/mcv_scored_questions"
+                                app:layout_constraintTop_toTopOf="@+id/mcv_scored_questions"
+                                tools:text="5" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="questions"
+                                android:textSize="15sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/mcv_scored_questions"
+                                app:layout_constraintEnd_toEndOf="@+id/mcv_scored_questions"
+                                app:layout_constraintStart_toStartOf="@+id/mcv_scored_questions"
+                                app:layout_constraintTop_toTopOf="@+id/mcv_scored_questions" />
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="20dp"
+                    android:text="@string/exit_message"
+                    android:textSize="15sp"
+ />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_exit_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/white_label_pill"
+            android:minWidth="120dp"
+            android:padding="10dp"
+            android:text="@string/exit_quiz"
+            android:textAlignment="center"
+            android:textColor="@color/text_dark_alt"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
